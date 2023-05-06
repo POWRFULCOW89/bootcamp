@@ -13,14 +13,16 @@
         </div>
 
         <div id="character" v-else-if="character">
-            <div id="pagination">
-                <button @click="prev" :disabled="!character.id">Anterior</button>
+            <div v-if="characters.length > 1" id="pagination">
+                <button @click="first">&larrb;</button>
+                <button @click="prev" :disabled="!character.id">&leftarrow;</button>
                 <div id="pagination-numbers">
                     <button @click="setCharacter(index)" v-for="(character, index) of characters">
-                        {{ index }}
+                        {{ index + 1 }}
                     </button>
                 </div>
-                <button @click="next">Siguiente</button>
+                <button @click="next">&rightarrow;</button>
+                <button @click="last">&rarrb;</button>
             </div>
 
             <h2>{{ character.name }} - #{{ character.id }}</h2>
@@ -47,11 +49,16 @@ export default {
             characters: null,
             error: null,
             name: "",
-            character: null,
+            characterIndex: 0,
             fields: [
                 "status", "species", "gender"
             ],
             timeout: null
+        }
+    },
+    computed: {
+        character() {
+            if (this.characters) return this.characters[this.characterIndex];
         }
     },
     methods: {
@@ -63,7 +70,7 @@ export default {
                 console.log(data)
                 if (data.error) throw new Error(data.error);
                 this.characters = data.results
-                this.setCharacter(0);
+                this.characterIndex = 0
             } catch (error) {
                 this.error = error
             }
@@ -76,13 +83,43 @@ export default {
             this.timeout = setTimeout(this.submit, 1000)
         },
         setCharacter(index) {
-            this.character = this.characters[index]
+            this.characterIndex = index;
+        },
+        first() {
+            this.characterIndex = 0
+        },
+        prev() {
+            if (this.characterIndex > 0) this.characterIndex--;
+        },
+        next() {
+            if (this.characterIndex < this.characters.length - 1) this.characterIndex++
+        },
+        last() {
+            this.characterIndex = this.characters.length - 1;
         }
+
     },
 }
 </script>
 
 <style scoped>
+#pagination,
+#pagination-numbers {
+    display: flex;
+    gap: 0.25em;
+    /* padding: .25em; */
+    font-size: 18px;
+
+}
+
+#pagination button {
+
+    background-color: transparent;
+    color: white;
+
+    border: 1px solid white;
+}
+
 #character {
     padding: 2em 0;
     border-radius: 16px;
