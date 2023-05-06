@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Práctica de manipulación del DOM</title>
+    <meta charset="UTF-8">
+    <style>
+      /* Estilos CSS */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      header {
+        background-color: #333333;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        background-color: #cccccc;
+        padding: 10px;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      nav li {
+        float: left;
+      }
+      nav li a {
+        display: block;
+        color: #333333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      nav li a:hover {
+        background-color: #333333;
+        color: #ffffff;
+      }
+      main {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        padding: 20px;
+        overflow: auto;
+      }
+      section {
+        float: left;
+        width: 30%;
+        margin-right: 2%;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border: 1px solid #cccccc;
+      }
+      aside {
+        float: left;
+        width: 15%;
+        margin-right: 2%;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border: 1px solid #cccccc;
+      }
+      footer {
+        background-color: #333333;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Práctica de manipulación del DOM</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Sección 1</h2>
+        <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section id="test4">
+        <button id="test1">
+          <p>boton 1</p>
+        </button>
+        <button id="test2">
+          <p>boton 2</p>
+        </button>
+        <button id="test3">
+          <p>boton 2</p>
+        </button>
+      </section>
+
+
+      <section>
+        <h2>Sección 1</h2>
+        <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section><section>
+      <h2>Sección 1</h2>
+      <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+    </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section><section>
+      <h2>Sección 1</h2>
+      <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+    </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section><section>
+      <h2>Sección 1</h2>
+      <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+    </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section><section>
+      <h2>Sección 1</h2>
+      <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+    </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section><section>
+      <h2>Sección 1</h2>
+      <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+    </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section><section>
+      <h2>Sección 1</h2>
+      <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+    </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section><section>
+      <h2>Sección 1</h2>
+      <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+    </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section><section>
+      <h2>Sección 1</h2>
+      <p>Este es el contenido de la sección 1. Utiliza el DOM para modificar este elemento.</p>
+    </section>
+      <section>
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+      <section>
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3. Utiliza el DOM para modificar este elemento.</p>
+      </section>
+
+
+
+    </main>
+    <footer>
+      <p>Derechos de autor © 2023 Práctica de manipulación del DOM</p>
+    </footer>
+  </body>
+</html>
